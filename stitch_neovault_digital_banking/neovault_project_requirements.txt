@@ -1,0 +1,16 @@
+# NeoVault: Next-Gen Personal Banking PRD
+
+## Aesthetic
+Minimalist-Luxe / Deep Charcoal (#121212), Electric Blue (#007AFF), and Silver (#C0C0C0).
+
+## UX Specifications
+- **Glassmorphism**: Apply glassmorphism effects (blur, border, transparency) to card elements.
+- **Privacy Mode**: Include a toggle that blurs sensitive balances across the app.
+- **Mobile UX**: Premium wallet feel with haptic-ready navigation and biometric login styling.
+
+## Required Pages
+1. **Account Overview**: Bento-style layout showing total balance, quick actions, and recent activity.
+2. **Transaction History**: List view with AI-categorization (e.g., icons for Dining, Transport, etc.).
+3. **Savings Goals**: Visual progress tracking for multiple goals.
+4. **Virtual Card Management**: Display and management of virtual cards with glassmorphic styling.
+5. **Biometric Login (Additional)**: To capture the requested biometric login styling.

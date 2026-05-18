@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#00daf3",
+                        "surface-variant": "#353535",
+                        "tertiary-container": "#d0d0d0",
+                        "secondary-container": "#4a4949",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#006875",
+                        "primary": "#c3f5ff",
+                        "surface-container": "#20201f",
+                        "primary-container": "#00e5ff",
+                        "outline-variant": "#3b494c",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#585959",
+                        "surface-bright": "#393939",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "on-secondary": "#313030",
+                        "on-surface": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "secondary": "#c8c6c5",
+                        "on-surface-variant": "#bac9cc",
+                        "tertiary-fixed": "#e3e2e2",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#00daf3",
+                        "on-primary-container": "#00626e",
+                        "outline": "#849396",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#001f24",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#9cf0ff",
+                        "background": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-fixed-variant": "#004f58",
+                        "tertiary": "#edecec",
+                        "on-tertiary": "#2f3131",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-secondary-container": "#bab8b7",
+                        "on-primary": "#00363d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "20px",
+                        "margin": "32px",
+                        "base": "8px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "headline-xl": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .electric-glow {
+            box-shadow: 0 0 40px -10px rgba(0, 229, 255, 0.15);
+        }
+        .silver-stroke {
+            border: 0.5px solid rgba(229, 226, 225, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-4 bg-zinc-950/60 backdrop-blur-2xl border-b border-white/5 font-manrope antialiased tracking-tight">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-white/10 active:scale-95 transition-transform">
+<img alt="Premium user profile" data-alt="A professional portrait of a tech-savvy user in a high-end minimalist setting. The lighting is soft and directional, highlighting clean facial features against a muted charcoal background. The aesthetic is modern and prestigious, aligned with a digital-first luxury brand identity using deep tones and subtle light gradients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOCgHM3SH4MyShjy4TS95z9-8_e4PUh_HyKd1uuMtiBH9vgIAcppWVzhekg_R7xMTsKuHwUz0gbgwSrJk4DN0sbLKztdDJ9QgxYWNULqOJ4j-zWoCc2ybKzSGOdnH4aIzuJr0ksQzatQibU7yDvyjDTVgJVlPPEOIWTofeLvZI9AZMZxR_QzYiI4FFaQpEfIA8OkM9s05YVQ4FurwVf1A_WOjc0CODhGgaZm1FpP9ZQnL8JXwBa4aryA_EwHESF83w_n13IKzFtv8"/>
+</div>
+<span class="text-lg font-bold tracking-[0.2em] text-zinc-100 uppercase">NeoVault</span>
+</div>
+<button class="text-zinc-500 hover:text-cyan-300 transition-colors duration-300 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</header>
+<main class="min-h-screen pt-xl pb-xl px-margin flex flex-col gap-lg bg-[#121212] overflow-x-hidden">
+<!-- Hero Section: Virtual Card Carousel -->
+<section class="mt-md relative flex flex-col gap-md">
+<div class="flex justify-between items-end">
+<div class="flex flex-col gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Active Instruments</span>
+<h1 class="font-headline-md text-headline-md text-white">Virtual Cards</h1>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full glass-card silver-stroke text-primary hover:bg-white/5 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="font-label-sm text-label-sm">Create New</span>
+</button>
+</div>
+<!-- Carousel UI -->
+<div class="flex gap-md overflow-x-auto pb-md no-scrollbar snap-x snap-mandatory">
+<!-- Card 1 (Active) -->
+<div class="min-w-[320px] h-[200px] flex-shrink-0 snap-center rounded-[24px] glass-card silver-stroke relative p-md electric-glow overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-transparent opacity-50"></div>
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-headline-md text-primary tracking-widest italic font-bold">PLATINUM</span>
+<span class="material-symbols-outlined text-white/40">contactless</span>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="font-headline-md text-white tracking-[0.15em] text-[20px]">•••• •••• •••• 8842</div>
+<div class="flex justify-between items-end">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase text-white/40 tracking-tighter">Expiry</span>
+<span class="text-sm font-bold text-white/80">09/28</span>
+</div>
+<div class="w-12 h-8 rounded-md bg-white/10 flex items-center justify-center backdrop-blur-md border border-white/5">
+<div class="flex -space-x-2">
+<div class="w-4 h-4 rounded-full bg-red-500/80"></div>
+<div class="w-4 h-4 rounded-full bg-yellow-500/80"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[320px] h-[200px] flex-shrink-0 snap-center rounded-[24px] glass-card silver-stroke relative p-md opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-headline-md text-zinc-400 tracking-widest italic font-bold">TITANIUM</span>
+<span class="material-symbols-outlined text-white/40">contactless</span>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="font-headline-md text-white tracking-[0.15em] text-[20px]">•••• •••• •••• 1209</div>
+<div class="flex justify-between items-end">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase text-white/40 tracking-tighter">Expiry</span>
+<span class="text-sm font-bold text-white/80">11/27</span>
+</div>
+<div class="w-12 h-8 rounded-md bg-white/10 flex items-center justify-center backdrop-blur-md border border-white/5">
+<div class="w-6 h-6 rounded-full bg-cyan-400/20 flex items-center justify-center">
+<div class="w-3 h-3 rounded-full bg-cyan-400"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Management Controls Bento Grid -->
+<section class="grid grid-cols-2 gap-md">
+<!-- Freeze Card Toggle -->
+<div class="col-span-2 glass-card silver-stroke rounded-2xl p-md flex items-center justify-between group active:scale-[0.98] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-zinc-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">ac_unit</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md font-bold text-white">Freeze Card</span>
+<span class="text-xs text-on-surface-variant">Temporarily disable this card</span>
+</div>
+</div>
+<div class="w-12 h-6 bg-zinc-800 rounded-full relative border border-white/5 flex items-center px-1">
+<div class="w-4 h-4 bg-zinc-500 rounded-full transition-all"></div>
+</div>
+</div>
+<!-- View PIN -->
+<button class="glass-card silver-stroke rounded-2xl p-md flex flex-col gap-md items-start active:scale-95 transition-all text-left">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 border border-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">password</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md font-bold text-white">View PIN</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider">Security check required</span>
+</div>
+</button>
+<!-- Card Settings -->
+<button class="glass-card silver-stroke rounded-2xl p-md flex flex-col gap-md items-start active:scale-95 transition-all text-left">
+<div class="w-10 h-10 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-zinc-400">
+<span class="material-symbols-outlined">settings_suggest</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md font-bold text-white">Manage</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider">Limits &amp; Online pay</span>
+</div>
+</button>
+<!-- Usage Statistics -->
+<div class="col-span-2 glass-card silver-stroke rounded-2xl p-lg flex flex-col gap-md overflow-hidden relative">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-container/5 blur-3xl rounded-full"></div>
+<div class="flex justify-between items-start relative z-10">
+<div class="flex flex-col gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Monthly spend limit</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-white">$4,250.00</span>
+<span class="text-xs text-zinc-500">of $10,000</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div class="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+<div class="h-full w-[42.5%] bg-gradient-to-r from-primary-container to-cyan-500 shadow-[0_0_8px_rgba(0,229,255,0.4)]"></div>
+</div>
+</div>
+</section>
+<!-- Aesthetic Glow Base -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-32 bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-8 left-0 right-0 mx-auto flex justify-around items-center px-6 py-3 z-50 bg-zinc-900/80 backdrop-blur-3xl fixed bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-lg rounded-2xl border border-zinc-100/10 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<!-- Vault -->
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider mt-1">Vault</span>
+</a>
+<!-- Activity -->
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider mt-1">Activity</span>
+</a>
+<!-- Goals -->
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">track_changes</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider mt-1">Goals</span>
+</a>
+<!-- Cards (ACTIVE) -->
+<a class="flex flex-col items-center justify-center text-cyan-400 drop-shadow-[0_0_12px_rgba(0,229,255,0.4)] active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">credit_card</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider mt-1">Cards</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

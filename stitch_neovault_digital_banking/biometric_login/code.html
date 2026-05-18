@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-lowest": "#0e0e0e",
+                "on-error": "#690005",
+                "primary-fixed-dim": "#00daf3",
+                "surface-variant": "#353535",
+                "tertiary-container": "#d0d0d0",
+                "secondary-container": "#4a4949",
+                "surface-container-highest": "#353535",
+                "inverse-primary": "#006875",
+                "primary": "#c3f5ff",
+                "surface-container": "#20201f",
+                "primary-container": "#00e5ff",
+                "outline-variant": "#3b494c",
+                "surface": "#131313",
+                "on-tertiary-container": "#585959",
+                "surface-bright": "#393939",
+                "on-secondary-fixed": "#1c1b1b",
+                "tertiary-fixed-dim": "#c6c6c6",
+                "on-secondary-fixed-variant": "#474646",
+                "on-background": "#e5e2e1",
+                "on-tertiary-fixed-variant": "#464747",
+                "secondary-fixed": "#e5e2e1",
+                "surface-dim": "#131313",
+                "on-secondary": "#313030",
+                "on-surface": "#e5e2e1",
+                "error-container": "#93000a",
+                "secondary": "#c8c6c5",
+                "on-surface-variant": "#bac9cc",
+                "tertiary-fixed": "#e3e2e2",
+                "inverse-surface": "#e5e2e1",
+                "surface-container-low": "#1c1b1b",
+                "error": "#ffb4ab",
+                "surface-tint": "#00daf3",
+                "on-primary-container": "#00626e",
+                "outline": "#849396",
+                "on-tertiary-fixed": "#1a1c1c",
+                "on-error-container": "#ffdad6",
+                "on-primary-fixed": "#001f24",
+                "surface-container-high": "#2a2a2a",
+                "primary-fixed": "#9cf0ff",
+                "background": "#131313",
+                "inverse-on-surface": "#313030",
+                "on-primary-fixed-variant": "#004f58",
+                "tertiary": "#edecec",
+                "on-tertiary": "#2f3131",
+                "secondary-fixed-dim": "#c8c6c5",
+                "on-secondary-container": "#bab8b7",
+                "on-primary": "#00363d"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "gutter": "20px",
+                "margin": "32px",
+                "base": "8px",
+                "md": "24px",
+                "lg": "48px",
+                "xs": "4px",
+                "sm": "12px",
+                "xl": "80px"
+            },
+            "fontFamily": {
+                "body-md": ["Manrope"],
+                "body-lg": ["Manrope"],
+                "headline-md": ["Manrope"],
+                "label-sm": ["Manrope"],
+                "headline-xl": ["Manrope"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-effect {
+            box-shadow: 0 0 40px rgba(0, 229, 255, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md overflow-hidden">
+<!-- Top Navigation Bar (Suppressed because Transactional/Security focused) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-8">
+<div class="text-lg font-bold tracking-[0.2em] text-zinc-100 uppercase font-headline-md">
+            NeoVault
+        </div>
+<div class="text-zinc-500">
+<span class="material-symbols-outlined text-2xl" data-icon="visibility_off">visibility_off</span>
+</div>
+</header>
+<main class="relative min-h-screen flex flex-col items-center justify-center px-margin">
+<!-- Background Ambient Glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-container/5 rounded-full blur-[120px] pointer-events-none"></div>
+<!-- Biometric Central Node -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="mb-lg group cursor-pointer active:scale-95 transition-transform duration-300">
+<div class="w-32 h-32 rounded-full glass-panel flex items-center justify-center border border-white/10 glow-effect">
+<span class="material-symbols-outlined text-6xl text-primary-container" data-icon="face" style="font-variation-settings: 'wght' 200;">face</span>
+</div>
+<!-- Animated-look decorative ring -->
+<div class="absolute top-0 left-0 w-32 h-32 rounded-full border border-primary-container/20 scale-125 opacity-50"></div>
+<div class="absolute top-0 left-0 w-32 h-32 rounded-full border border-primary-container/10 scale-150 opacity-20"></div>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-center mb-xs text-white">
+                Unlock NeoVault
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant/60 tracking-wide text-center">
+                Scan your face to access your private vault
+            </p>
+</div>
+<!-- Fallback Action Section -->
+<div class="absolute bottom-xl w-full max-w-sm px-margin flex flex-col gap-sm items-center">
+<button class="w-full py-md px-lg rounded-xl glass-panel text-on-surface font-label-sm uppercase tracking-widest border border-white/5 hover:bg-white/5 transition-all active:scale-[0.98]">
+                Enter Passcode
+            </button>
+<div class="mt-md flex flex-col items-center gap-xs">
+<span class="font-label-sm text-on-surface-variant/40 uppercase tracking-tighter">Security Protocol v4.2.0</span>
+<div class="flex gap-1">
+<div class="w-1 h-1 rounded-full bg-primary-container"></div>
+<div class="w-1 h-1 rounded-full bg-primary-container/40"></div>
+<div class="w-1 h-1 rounded-full bg-primary-container/20"></div>
+</div>
+</div>
+</div>
+<!-- Decorative Security Elements -->
+<div class="absolute top-1/2 left-8 -translate-y-1/2 hidden lg:flex flex-col gap-lg opacity-20">
+<div class="rotate-90 origin-left">
+<span class="text-[10px] font-mono tracking-[0.5em] uppercase text-zinc-500">Encrypted_Session_Active</span>
+</div>
+</div>
+<div class="absolute bottom-12 left-12">
+<div class="p-4 rounded-full border border-white/5 glass-panel">
+<span class="material-symbols-outlined text-zinc-400" data-icon="fingerprint">fingerprint</span>
+</div>
+</div>
+<div class="absolute bottom-12 right-12">
+<div class="p-4 rounded-full border border-white/5 glass-panel">
+<span class="material-symbols-outlined text-zinc-400" data-icon="nfc">nfc</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Suppressed for Security Focus) -->
+<!-- Image Fallback / Hero Background Mockup -->
+<div class="fixed inset-0 -z-10 bg-surface-container-lowest overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<img class="w-full h-full object-cover grayscale mix-blend-overlay" data-alt="A sophisticated abstract background featuring fluid, dark geometric shapes and subtle gradients of obsidian and charcoal. The lighting is low-key and dramatic, evoking a sense of high-security and digital prestige. Thin, razor-sharp lines of electric blue cut through the darkness like laser beams. The overall aesthetic is minimalist, architectural, and powerfully modern, matching a premium fintech interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLy7fgrsls9-499-0iYgiYww8gr2fPAtCgSxeN-WvpYMyyKCWHojt9UQBdDh9ezmcGS2u5EzhaFz1eh3FOrsT-ACtsHuB8JkiTUYJpUcwMAYPPmHSOkCcamhR2S8BPZ3q835wp4S1CtiN8UUgE6DEsZZNI1lLclwjBU8YaV0yyj8t7AUcbNBAy9PVp0mwzjc1uGDfL5sIsNCJJ4SurRzm5RA-yWVAx9ds7MLinrNcXfDnytH8Up4scHev9CwV63_avOmlu0-E5a1A"/>
+</div>
+<!-- Grain Texture Overlay -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBljqNbS__jUGybUPa0TrROyWngPt3V3bgfha_VdKUHOl9tzYQ7BTpSWgsK2DPelJi89as1QqjwXlW4ruKWaWogpj0Z9spSwVvIxiOVoX_fLUkw0DIUjCYFA5YKM94IU8mxPgfpW4hPdm3OU0DYw6k3nSPbcojzHQaS7Wl-rrkuWheg6_coNs1vYl3EvmoxL1tKMNHN8tLvVhw0WXsLag0HEOcr28oxoiPSs6JQCZt4cwPE0adD1ykXDC7nnsuKbF_q6HqklAwYkmY');"></div>
+</div>
+</body></html>

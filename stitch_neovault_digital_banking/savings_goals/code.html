@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#00daf3",
+                        "surface-variant": "#353535",
+                        "tertiary-container": "#d0d0d0",
+                        "secondary-container": "#4a4949",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#006875",
+                        "primary": "#c3f5ff",
+                        "surface-container": "#20201f",
+                        "primary-container": "#00e5ff",
+                        "outline-variant": "#3b494c",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#585959",
+                        "surface-bright": "#393939",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "on-secondary": "#313030",
+                        "on-surface": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "secondary": "#c8c6c5",
+                        "on-surface-variant": "#bac9cc",
+                        "tertiary-fixed": "#e3e2e2",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#00daf3",
+                        "on-primary-container": "#00626e",
+                        "outline": "#849396",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#001f24",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#9cf0ff",
+                        "background": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-fixed-variant": "#004f58",
+                        "tertiary": "#edecec",
+                        "on-tertiary": "#2f3131",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-secondary-container": "#bab8b7",
+                        "on-primary": "#00363d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "20px",
+                        "margin": "32px",
+                        "base": "8px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "headline-xl": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .electric-glow {
+            box-shadow: 0 0 24px rgba(0, 229, 255, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-4 bg-zinc-950/60 backdrop-blur-2xl border-b border-white/5 font-manrope antialiased tracking-tight">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-primary/20 p-0.5 overflow-hidden active:scale-95 transition-transform">
+<img alt="Profile" class="w-full h-full object-cover rounded-full" data-alt="A high-end, professionally shot portrait of a sophisticated user for a premium banking app. The subject is well-lit with soft, cool-toned studio lighting that highlights a sleek, modern aesthetic. The background is a minimalist, deep charcoal gradient that conveys a sense of security and exclusive prestige. The overall mood is silent, powerful, and technologically advanced, fitting a digital-first prestige brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWJCSbAQ7UO_9FXItcgzqvnlurov07nNmLjbre-usziQIUV3J4qwSb4CObZzha1h-4QQGJTDZ27HQhfTJv5dPqxfm6XOqXWKCP35Zbnxz4_56QagnNeO45rby1RZEQhJ42xdCGztZBQn2dlu49dXtZdeOt3yb4ry-a4pqG1zQCdlEfNUxxucAUSgEs-Gl46ZbRca8wZqeH7LbfO4E_XGwBUiZaJazG41Bjlt1f11kTpVYIRzVKDa6_aQV7nabMUKe9A20ZMFOIibA"/>
+</div>
+<h1 class="text-lg font-bold tracking-[0.2em] text-zinc-100 uppercase">NeoVault</h1>
+</div>
+<button class="text-zinc-500 hover:text-cyan-300 transition-colors duration-300 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="visibility_off">visibility_off</span>
+</button>
+</header>
+<main class="pt-xl pb-xl px-margin max-w-7xl mx-auto space-y-lg">
+<!-- Header Section -->
+<section class="flex justify-between items-end">
+<div class="space-y-xs">
+<p class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest">Financial Portfolio</p>
+<h2 class="font-headline-xl text-headline-xl text-zinc-100">Savings Goals</h2>
+</div>
+<button class="flex items-center gap-2 px-md py-sm rounded-xl border border-white/20 bg-white/5 backdrop-blur-md text-zinc-100 font-label-sm uppercase tracking-wider hover:bg-white/10 transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+<span>Add New Goal</span>
+</button>
+</section>
+<!-- Bento Grid for Goals -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Goal: New Car (Large Feature) -->
+<div class="md:col-span-8 glass-panel rounded-3xl p-lg flex flex-col justify-between electric-glow relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/10 blur-[100px] -mr-32 -mt-32"></div>
+<div class="flex justify-between items-start relative z-10">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center mb-md border border-white/5">
+<span class="material-symbols-outlined text-primary-container" data-icon="directions_car">directions_car</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-zinc-100">New Car</h3>
+<p class="font-body-md text-zinc-400 mt-xs">Tesla Model S Plaid Fund</p>
+</div>
+<div class="text-right">
+<p class="font-headline-md text-headline-md text-zinc-100">$84,200.00</p>
+<p class="font-label-sm text-label-sm text-zinc-500 uppercase">Target: $120,000</p>
+</div>
+</div>
+<div class="mt-xl space-y-md relative z-10">
+<div class="flex justify-between font-label-sm text-zinc-400 uppercase tracking-widest">
+<span>Progress</span>
+<span class="text-primary-container">70%</span>
+</div>
+<div class="h-3 w-full bg-zinc-800/50 rounded-full overflow-hidden border border-white/5">
+<div class="h-full w-[70%] bg-gradient-to-r from-primary-container to-cyan-300 shadow-[0_0_12px_rgba(0,229,255,0.4)]"></div>
+</div>
+</div>
+</div>
+<!-- Side Metric: Emergency Fund (Circular Indicator) -->
+<div class="md:col-span-4 glass-panel rounded-3xl p-lg flex flex-col items-center justify-center text-center space-y-md">
+<div class="relative w-40 h-40 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle cx="80" cy="80" fill="transparent" r="74" stroke="rgba(255,255,255,0.05)" stroke-width="8"></circle>
+<circle cx="80" cy="80" fill="transparent" r="74" stroke="url(#cyanGradient)" stroke-dasharray="464.9" stroke-dashoffset="46.5" stroke-linecap="round" stroke-width="8"></circle>
+<defs>
+<lineargradient id="cyanGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#00e5ff"></stop>
+<stop offset="100%" style="stop-color:#00daf3"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-md text-headline-md text-zinc-100">90%</span>
+<span class="font-label-sm text-label-sm text-zinc-500 uppercase">Secure</span>
+</div>
+</div>
+<div class="space-y-xs">
+<h3 class="font-headline-md text-headline-md text-zinc-100">Emergency Fund</h3>
+<p class="font-body-md text-zinc-400">$18,000 / $20,000</p>
+</div>
+</div>
+<!-- Grid Item: Travel -->
+<div class="md:col-span-6 glass-panel rounded-3xl p-lg space-y-lg">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-xl bg-zinc-800 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-container" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<div>
+<h3 class="font-body-lg font-bold text-zinc-100">Tokyo Summer '25</h3>
+<p class="text-label-sm text-zinc-500 uppercase tracking-tighter">Travel Goal</p>
+</div>
+</div>
+<span class="font-body-md text-zinc-100">$4,500.00</span>
+</div>
+<div class="space-y-sm">
+<div class="h-1.5 w-full bg-zinc-800 rounded-full overflow-hidden">
+<div class="h-full w-[45%] bg-primary-container"></div>
+</div>
+<div class="flex justify-between text-label-sm text-zinc-500 uppercase">
+<span>45% Complete</span>
+<span>$10,000 Target</span>
+</div>
+</div>
+</div>
+<!-- Grid Item: Custom High-Yield -->
+<div class="md:col-span-6 glass-panel rounded-3xl p-lg flex items-center justify-between group cursor-pointer hover:bg-zinc-100/5 transition-all">
+<div class="flex items-center gap-md">
+<div class="w-14 h-14 rounded-full border-2 border-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h3 class="font-body-lg font-bold text-zinc-100">Investment Vault</h3>
+<p class="text-label-sm text-zinc-500 uppercase">4.85% APY compounding</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-body-md font-bold text-zinc-100">$256,400.12</p>
+<span class="text-label-sm text-primary-container uppercase">Top Performer</span>
+</div>
+</div>
+</div>
+<!-- Analytical Insights -->
+<section class="pt-md">
+<h3 class="font-label-sm text-label-sm text-zinc-500 uppercase tracking-widest mb-md">Goal Velocity</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-md border-l border-primary-container/30 bg-primary-container/5 rounded-r-xl">
+<p class="font-label-sm text-zinc-500 uppercase">Monthly Contribution</p>
+<p class="font-headline-md text-zinc-100">+$2,450.00</p>
+</div>
+<div class="p-md border-l border-white/10 bg-white/5 rounded-r-xl">
+<p class="font-label-sm text-zinc-500 uppercase">Projected Freedom</p>
+<p class="font-headline-md text-zinc-100">Oct 2026</p>
+</div>
+<div class="p-md border-l border-white/10 bg-white/5 rounded-r-xl">
+<p class="font-label-sm text-zinc-500 uppercase">Interest Earned (YTD)</p>
+<p class="font-headline-md text-zinc-100">$4,129.80</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-8 left-0 right-0 mx-auto flex justify-around items-center px-6 py-3 z-50 bg-zinc-900/80 backdrop-blur-3xl fixed bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-lg rounded-2xl border border-zinc-100/10 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<button class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider mt-1">Vault</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider mt-1">Activity</span>
+</button>
+<button class="flex flex-col items-center justify-center text-cyan-400 drop-shadow-[0_0_12px_rgba(0,229,255,0.4)] active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined" data-icon="track_changes" style="font-variation-settings: 'FILL' 1;">track_changes</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider mt-1">Goals</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined" data-icon="credit_card">credit_card</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider mt-1">Cards</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider mt-1">Profile</span>
+</button>
+</nav>
+<!-- Decorative HUD Element -->
+<div class="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent pointer-events-none z-40"></div>
+</body></html>

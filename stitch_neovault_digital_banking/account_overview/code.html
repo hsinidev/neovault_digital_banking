@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#00daf3",
+                    "surface-variant": "#353535",
+                    "tertiary-container": "#d0d0d0",
+                    "secondary-container": "#4a4949",
+                    "surface-container-highest": "#353535",
+                    "inverse-primary": "#006875",
+                    "primary": "#c3f5ff",
+                    "surface-container": "#20201f",
+                    "primary-container": "#00e5ff",
+                    "outline-variant": "#3b494c",
+                    "surface": "#131313",
+                    "on-tertiary-container": "#585959",
+                    "surface-bright": "#393939",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "on-secondary-fixed-variant": "#474646",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#464747",
+                    "secondary-fixed": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "on-secondary": "#313030",
+                    "on-surface": "#e5e2e1",
+                    "error-container": "#93000a",
+                    "secondary": "#c8c6c5",
+                    "on-surface-variant": "#bac9cc",
+                    "tertiary-fixed": "#e3e2e2",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#00daf3",
+                    "on-primary-container": "#00626e",
+                    "outline": "#849396",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#001f24",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed": "#9cf0ff",
+                    "background": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "on-primary-fixed-variant": "#004f58",
+                    "tertiary": "#edecec",
+                    "on-tertiary": "#2f3131",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-secondary-container": "#bab8b7",
+                    "on-primary": "#00363d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "20px",
+                    "margin": "32px",
+                    "base": "8px",
+                    "md": "24px",
+                    "lg": "48px",
+                    "xs": "4px",
+                    "sm": "12px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "label-sm": ["Manrope"],
+                    "headline-xl": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .electric-glow {
+            box-shadow: 0 0 24px rgba(0, 229, 255, 0.15);
+        }
+        .blurred-text {
+            filter: blur(8px);
+            user-select: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-4 bg-zinc-950/60 backdrop-blur-2xl border-b border-white/5 font-manrope antialiased tracking-tight">
+<div class="text-lg font-bold tracking-[0.2em] text-zinc-100 uppercase">NeoVault</div>
+<div class="flex items-center gap-4">
+<button class="text-zinc-500 hover:text-cyan-300 transition-colors duration-300 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="visibility_off">visibility_off</span>
+</button>
+<div class="w-10 h-10 rounded-full border border-primary-container/30 overflow-hidden">
+<img alt="Premium user profile" class="w-full h-full object-cover" data-alt="A sophisticated close-up portrait of a professional individual in a high-tech environment. The lighting is moody and cinematic with electric blue rim lighting against a deep charcoal background. The overall aesthetic is polished, premium, and futuristic, aligning with a digital-first prestige brand identity. The subject has a calm, confident expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAufRqU5Tq7N3a4ZSXZrb8eK9M22iOY56yDA54MVuWNL6_bHGIqm9ImRo-uwy2UOJTE-4WLuNBCXHcubnirPWEDA10VzdUR5wJwZg-NHSBfQqC6tQFKH36RToCL7xlrXKz8OH8K4wOCMlNJr3yk5OqS20-y_8cqB4A-E5og2iai6_9898q1862_wxOTe_DQpVX_b_T_Ua5hrc-LE19MApdZgVefrBKkw3MDvBJ2MdRnmHzctwBljRoiU30YHeaURkVG6IgF0D--_mg"/>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-40 px-margin max-w-7xl mx-auto">
+<!-- Hero Section: Total Balance -->
+<section class="mb-lg">
+<div class="glass-panel rounded-3xl p-lg electric-glow relative overflow-hidden">
+<!-- Background decorative glow -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-container/10 blur-[100px] rounded-full"></div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-md relative z-10">
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest mb-xs">Total Portfolio Value</p>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tighter blurred-text">$482,950.24</h1>
+</div>
+<div class="flex gap-sm">
+<div class="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container/10 border border-primary-container/20">
+<span class="material-symbols-outlined text-primary-container text-[18px]" data-icon="trending_up">trending_up</span>
+<span class="text-label-sm font-label-sm text-primary-container">+12.4%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Quick Actions (Left Column) -->
+<div class="md:col-span-4 grid grid-cols-1 gap-gutter">
+<div class="glass-panel rounded-3xl p-md flex flex-col justify-between aspect-square md:aspect-auto min-h-[280px]">
+<h3 class="font-headline-md text-headline-md text-zinc-100 mb-md">Quick Actions</h3>
+<div class="grid grid-cols-3 gap-sm">
+<button class="flex flex-col items-center gap-2 group transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-zinc-800 flex items-center justify-center border border-white/5 group-hover:border-primary-container/50 group-active:scale-90 transition-all">
+<span class="material-symbols-outlined text-primary-container" data-icon="send">send</span>
+</div>
+<span class="text-label-sm font-label-sm text-zinc-400">Send</span>
+</button>
+<button class="flex flex-col items-center gap-2 group transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-zinc-800 flex items-center justify-center border border-white/5 group-hover:border-primary-container/50 group-active:scale-90 transition-all">
+<span class="material-symbols-outlined text-primary-container" data-icon="request_quote">request_quote</span>
+</div>
+<span class="text-label-sm font-label-sm text-zinc-400">Request</span>
+</button>
+<button class="flex flex-col items-center gap-2 group transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-zinc-800 flex items-center justify-center border border-white/5 group-hover:border-primary-container/50 group-active:scale-90 transition-all">
+<span class="material-symbols-outlined text-primary-container" data-icon="qr_code_2">qr_code_2</span>
+</div>
+<span class="text-label-sm font-label-sm text-zinc-400">Pay</span>
+</button>
+</div>
+<div class="mt-md pt-md border-t border-white/5">
+<div class="flex items-center justify-between text-zinc-400">
+<span class="text-label-sm font-label-sm uppercase">Daily Limit</span>
+<span class="text-label-sm font-label-sm">$10,000.00</span>
+</div>
+<div class="w-full h-1 bg-zinc-800 rounded-full mt-2">
+<div class="w-1/3 h-full bg-primary-container rounded-full shadow-[0_0_8px_rgba(0,229,255,0.6)]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity (Center Column - Spans 2) -->
+<div class="md:col-span-8">
+<div class="glass-panel rounded-3xl p-md h-full min-h-[400px]">
+<div class="flex items-center justify-between mb-lg">
+<h3 class="font-headline-md text-headline-md text-zinc-100">Recent Activity</h3>
+<button class="text-label-sm font-label-sm text-primary-container uppercase tracking-widest hover:text-primary transition-colors">View All</button>
+</div>
+<div class="space-y-4">
+<!-- Transaction 1 -->
+<div class="flex items-center justify-between p-4 rounded-2xl hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center border border-white/5 group-hover:border-primary-container/30 transition-all">
+<span class="material-symbols-outlined text-zinc-300" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-zinc-100">Apple Store</p>
+<p class="text-label-sm font-label-sm text-zinc-500">Subscription &amp; Services</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-body-md text-body-md text-zinc-100">-$12.99</p>
+<p class="text-label-sm font-label-sm text-zinc-500">Today, 10:45 AM</p>
+</div>
+</div>
+<!-- Transaction 2 -->
+<div class="flex items-center justify-between p-4 rounded-2xl hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center border border-white/5 group-hover:border-primary-container/30 transition-all">
+<span class="material-symbols-outlined text-zinc-300" data-icon="payments">payments</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-zinc-100">Salary Deposit</p>
+<p class="text-label-sm font-label-sm text-zinc-500">Tech Corp Intl.</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-body-md text-body-md text-primary-container">+$8,420.00</p>
+<p class="text-label-sm font-label-sm text-zinc-500">Yesterday</p>
+</div>
+</div>
+<!-- Transaction 3 -->
+<div class="flex items-center justify-between p-4 rounded-2xl hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center border border-white/5 group-hover:border-primary-container/30 transition-all">
+<span class="material-symbols-outlined text-zinc-300" data-icon="restaurant">restaurant</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-zinc-100">Nobu Tokyo</p>
+<p class="text-label-sm font-label-sm text-zinc-500">Lifestyle &amp; Dining</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-body-md text-body-md text-zinc-100">-$425.50</p>
+<p class="text-label-sm font-label-sm text-zinc-500">Aug 24, 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mini-Savings Tracker (Row 2) -->
+<div class="md:col-span-5">
+<div class="glass-panel rounded-3xl p-md flex flex-col justify-between h-full min-h-[280px]">
+<div>
+<div class="flex items-center gap-2 mb-sm">
+<span class="material-symbols-outlined text-primary-container" data-icon="track_changes">track_changes</span>
+<h3 class="font-headline-md text-headline-md text-zinc-100">Savings Goal</h3>
+</div>
+<p class="text-label-sm font-label-sm text-zinc-400 uppercase tracking-widest">New Porsche 911 GT3</p>
+</div>
+<div class="my-md">
+<div class="flex items-end justify-between mb-2">
+<span class="text-headline-md font-headline-md text-zinc-100">$142,000 <span class="text-body-md text-zinc-500">/ $185,000</span></span>
+<span class="text-label-sm font-label-sm text-primary-container">76%</span>
+</div>
+<div class="w-full h-3 bg-zinc-800/50 rounded-full overflow-hidden border border-white/5">
+<div class="w-[76%] h-full bg-gradient-to-r from-primary-container to-cyan-300 shadow-[0_0_15px_rgba(0,229,255,0.4)]"></div>
+</div>
+</div>
+<button class="w-full py-4 rounded-2xl bg-zinc-100 text-zinc-950 font-bold uppercase tracking-widest text-label-sm active:scale-95 transition-transform">
+                        Add Funds
+                    </button>
+</div>
+</div>
+<!-- Market Insight (Row 2 - Right) -->
+<div class="md:col-span-7">
+<div class="glass-panel rounded-3xl p-md flex flex-col justify-between h-full min-h-[280px] bg-gradient-to-br from-zinc-900 to-zinc-950">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-zinc-100">Vault Security</h3>
+<p class="text-body-md text-zinc-400 mt-2">Enhanced biometric protection is active across all global nodes.</p>
+</div>
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+</div>
+<div class="flex gap-4 overflow-hidden">
+<div class="flex-1 p-4 rounded-2xl bg-white/5 border border-white/5">
+<p class="text-label-sm font-label-sm text-zinc-500 uppercase mb-1">Status</p>
+<p class="text-body-md font-bold text-primary-container">Encrypted</p>
+</div>
+<div class="flex-1 p-4 rounded-2xl bg-white/5 border border-white/5">
+<p class="text-label-sm font-label-sm text-zinc-500 uppercase mb-1">Location</p>
+<p class="text-body-md font-bold text-zinc-200">Zurich, CH</p>
+</div>
+<div class="flex-1 p-4 rounded-2xl bg-white/5 border border-white/5">
+<p class="text-label-sm font-label-sm text-zinc-500 uppercase mb-1">IP Node</p>
+<p class="text-body-md font-bold text-zinc-200">192.168.1.1</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-8 left-0 right-0 mx-auto flex justify-around items-center px-6 py-3 z-50 bg-zinc-900/80 backdrop-blur-3xl rounded-2xl border border-zinc-100/10 w-[92%] max-w-lg shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<!-- Vault (Active) -->
+<a class="flex flex-col items-center justify-center text-cyan-400 drop-shadow-[0_0_12px_rgba(0,229,255,0.4)] transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="account_balance_wallet" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider">Vault</span>
+</a>
+<!-- Activity -->
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="history">history</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider">Activity</span>
+</a>
+<!-- Goals -->
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="track_changes">track_changes</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider">Goals</span>
+</a>
+<!-- Cards -->
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="credit_card">credit_card</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider">Cards</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-200 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

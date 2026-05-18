@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            backdrop-filter: blur(40px);
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .electric-glow {
+            box-shadow: 0 0 24px rgba(0, 229, 255, 0.15);
+        }
+        body {
+            background-color: #131313;
+            overflow-x: hidden;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#131313",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "tertiary": "#edecec",
+                        "surface-container": "#20201f",
+                        "on-primary-fixed": "#001f24",
+                        "on-tertiary": "#2f3131",
+                        "on-secondary": "#313030",
+                        "secondary-container": "#4a4949",
+                        "primary-container": "#00e5ff",
+                        "surface": "#131313",
+                        "on-surface-variant": "#bac9cc",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed-variant": "#004f58",
+                        "secondary": "#c8c6c5",
+                        "on-error": "#690005",
+                        "primary-fixed": "#9cf0ff",
+                        "on-primary-container": "#00626e",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#e3e2e2",
+                        "primary-fixed-dim": "#00daf3",
+                        "on-background": "#e5e2e1",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-secondary-container": "#bab8b7",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-highest": "#353535",
+                        "primary": "#c3f5ff",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#474646",
+                        "tertiary-container": "#d0d0d0",
+                        "outline-variant": "#3b494c",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-tint": "#00daf3",
+                        "background": "#131313",
+                        "surface-variant": "#353535",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-container": "#585959",
+                        "inverse-on-surface": "#313030",
+                        "outline": "#849396",
+                        "on-primary": "#00363d",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#006875",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "surface-bright": "#393939",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "gutter": "20px",
+                        "base": "8px",
+                        "md": "24px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "margin": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-dim text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Shell Suppression: This is a Transactional/Login screen, TopAppBar and BottomNavBar are hidden to focus the user journey -->
+<main class="min-h-screen flex items-center justify-center p-gutter lg:p-xl relative overflow-hidden">
+<!-- Abstract Background Orbs for Depth -->
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary-container/10 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-surface-container-highest/20 blur-[120px]"></div>
+<!-- Layout Container -->
+<div class="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 glass-panel rounded-3xl overflow-hidden shadow-2xl relative z-10">
+<!-- Left Side: Brand Identity -->
+<div class="relative hidden lg:flex flex-col justify-between p-xl border-r border-white/5 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Abstract secure digital architecture" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="A cinematic, high-detail macro shot of a complex geometric structure made of dark brushed metal and glowing electric blue circuits. The scene represents a high-security digital vault with a futuristic architectural feel. Lighting is moody and directional, casting long shadows and highlighting the metallic textures. The overall aesthetic is minimalist, prestigious, and technically precise, utilizing a deep charcoal and silver palette with vibrant cyan light strips." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnf_sJHL_NDvrSTax0AKQup9ql2RmfEQ7DpftjNUVpbeNWymt9pSXMvqDjGmlXCAP58wBlwuC4TmlAOI0GP76xH9o6U04MeoUiZI9sc7meNyd7gTK0TJbjWH44wWwTz1WMGHOWhgejM_5773xVt3RIHpD_Us8cIotcaWiK6gRGwGnyY3DO_IblOn0YLUmM9f7fJPY_Dai4TR1n_j9AfMDpgWnFw9sPvtgIGV6u1iQcnnACkHN5H5OmNqY6hh4He26DMUKwRjClKCM"/>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-base mb-xl">
+<span class="material-symbols-outlined text-primary-container text-[40px]" data-icon="account_balance_wallet" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<h1 class="font-headline-xl text-on-surface uppercase tracking-[0.2em] text-[24px]">NeoVault</h1>
+</div>
+<div class="max-w-md">
+<h2 class="font-headline-xl text-on-surface mb-md">Next-Gen Banking</h2>
+<p class="font-body-lg text-on-surface-variant">Secure your assets in a vault designed for the digital frontier. Precision, privacy, and power in every transaction.</p>
+</div>
+</div>
+<div class="relative z-10 flex flex-col gap-sm">
+<div class="flex items-center gap-base text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="shield">shield</span>
+<span class="font-label-sm">E2E Quantum Encryption</span>
+</div>
+<div class="flex items-center gap-base text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+<span class="font-label-sm">Biometric Protocol 2.0</span>
+</div>
+</div>
+</div>
+<!-- Right Side: Interaction Panel -->
+<div class="flex flex-col justify-center p-md lg:p-xl bg-surface-container/30">
+<div class="w-full max-w-md mx-auto">
+<!-- Toggle State -->
+<div class="flex p-xs bg-surface-container-low rounded-xl mb-xl border border-white/5">
+<button class="flex-1 py-sm px-md rounded-lg font-label-sm bg-surface-container-highest text-on-surface transition-all">Sign In</button>
+<button class="flex-1 py-sm px-md rounded-lg font-label-sm text-on-surface-variant hover:text-on-surface transition-all">Create Account</button>
+</div>
+<!-- Header -->
+<header class="mb-xl">
+<h3 class="font-headline-md text-on-surface mb-xs">Welcome Back</h3>
+<p class="font-body-md text-on-surface-variant">Access your private digital treasury.</p>
+</header>
+<!-- Form -->
+<form class="space-y-md" onsubmit="return false;">
+<div class="space-y-xs">
+<label class="font-label-sm text-on-surface-variant ml-xs">Vault Identifier (Email)</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary-container transition-colors" data-icon="alternate_email">alternate_email</span>
+<input class="w-full pl-[56px] pr-md py-md bg-surface-container-highest/50 border border-white/5 rounded-xl font-body-md text-on-surface placeholder:text-on-secondary-container focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container/20 transition-all" placeholder="name@domain.com" type="email"/>
+</div>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between items-center px-xs">
+<label class="font-label-sm text-on-surface-variant">Access Key</label>
+<a class="font-label-sm text-primary-container hover:underline" href="#">Forgot?</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary-container transition-colors" data-icon="lock">lock</span>
+<input class="w-full pl-[56px] pr-[56px] py-md bg-surface-container-highest/50 border border-white/5 rounded-xl font-body-md text-on-surface placeholder:text-on-secondary-container focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container/20 transition-all" placeholder="••••••••••••" type="password"/>
+<button class="absolute right-md top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<button class="w-full py-md bg-gradient-to-r from-primary-container to-primary-fixed-dim text-on-primary-fixed font-headline-md text-body-md rounded-xl hover:opacity-90 active:scale-[0.98] transition-all electric-glow" type="submit">
+                            Authorize Access
+                        </button>
+</form>
+<!-- Divider -->
+<div class="relative my-xl">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-white/5"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase tracking-widest">
+<span class="px-md bg-surface-container/30 text-on-secondary-container font-label-sm">Security Layer 2</span>
+</div>
+</div>
+<!-- Biometric Button -->
+<button class="w-full py-md flex items-center justify-center gap-sm bg-surface-container-highest border border-white/10 rounded-xl hover:bg-surface-container-high transition-all active:scale-[0.98] group">
+<span class="material-symbols-outlined text-primary-container group-hover:scale-110 transition-transform" data-icon="fingerprint" style="font-variation-settings: 'wght' 300;">fingerprint</span>
+<span class="font-label-sm text-on-surface">Initiate Biometric Scan</span>
+</button>
+<!-- Mobile Brand Anchor (Visible only on mobile) -->
+<div class="mt-xl text-center lg:hidden">
+<div class="flex items-center justify-center gap-base opacity-40">
+<span class="material-symbols-outlined text-primary-container text-md" data-icon="account_balance_wallet" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="font-label-sm text-on-surface uppercase tracking-[0.2em]">NeoVault</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Legal/Status (Minimal) -->
+<div class="absolute bottom-md left-0 right-0 flex justify-center lg:justify-between px-xl pointer-events-none opacity-30">
+<span class="font-label-sm hidden lg:block">NEO-SYS VER: 4.2.0-STABLE</span>
+<span class="font-label-sm">© 2024 NEOVAULT TECHNOLOGIES</span>
+<span class="font-label-sm hidden lg:block">ENCRYPTION: AES-256-GCM</span>
+</div>
+</main>
+</body></html>
